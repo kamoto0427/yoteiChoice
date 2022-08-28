@@ -1,19 +1,19 @@
 <div class="container">
     <div class="yotei-field">
         <div>
-            <p>東京国立博物館</p>
+            <p>{{ yotei.name }}</p>
         </div>
         <div>
-            <p>仏像や刀がすごい</p>
+            <p>{{ yotei.message }}</p>
         </div>
         <div>
-            <p>東京</p>
+            <p>{{ yotei.prefectures }}</p>
         </div>
         <div>
-            <p>上野駅徒歩10分</p>
+            <p>{{ yotei.access }}</p>
         </div>
     </div>
     <div class="button-row">
-        <button mat-raised-button color="primary">ランダム</button>
+        <button mat-raised-button color="primary" (click)="feachKamoto()">ランダム</button>
     </div>
 </div>
