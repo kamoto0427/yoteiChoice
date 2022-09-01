@@ -14,6 +14,9 @@ import { MatButtonModule } from '@angular/material/button';
 // component
 import { RandomComponent } from './random/random.component';
 
+// Swiper
+import { SwiperModule } from 'swiper/angular';
+
 const ROUTE_TABLE: Routes = [
   { path: 'random', component: RandomComponent }
 ];
@@ -31,6 +34,7 @@ const ROUTE_TABLE: Routes = [
     MatButtonModule,
     RouterModule.forRoot(ROUTE_TABLE),
     HttpClientModule,
+    SwiperModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
