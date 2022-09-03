@@ -1,0 +1,21 @@
+<div>
+  <div class="dummy-area"></div>
+  <swiper
+    #swiperVirtualRef
+    [slidesPerView]="1.25"
+    [spaceBetween]="15"
+    [pagination]="{ type: 'fraction' }"
+    [virtual]="true"
+    slideActiveClass="swiper-active"
+    [centeredSlides]="true"
+    [navigation]="true"
+    class="yotei-swiper"
+    id="yotei"
+  >
+    <ng-template swiperSlide
+      *ngFor="let slide of virtualSlides;"
+    >
+    {{ slide }}
+    </ng-template>
+  </swiper>
+</div>
