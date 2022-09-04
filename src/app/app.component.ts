@@ -18,22 +18,28 @@ export class AppComponent {
     private yoteiChoiceService: YoteiChoiceService,
   ) {}
   ngOnInit () {
-    this.feachKamoto();
+    this.init();
   }
+
+  /**
+   * 初期化処理
+   */
+     public init() {
+      // mockからデータを取得
+      const yoteiData = this.getYoteiData();
+      // ランダムな数字をもとに重複しないように配列を作成する
+      this.notDuplicationRandomArray(yoteiData);
+    }
 
   /**
    * mockからデータを取得
    */
   public getYoteiData() {
+    // サーバーからデータを取得
+    // this.yoteiChoiceService.getYoteiChoice().subscribe((yoteiChoice: YoteiChoice) => {
+    //   this.yotei;
+    // });
     return Yotei1Json.yotei;
-  }
-
-  /**
-   * データのlengthを取得
-   */
-  public getLength() {
-    const yotei = this.getYoteiData();
-    return yotei.length;
   }
 
   /**
@@ -45,16 +51,14 @@ export class AppComponent {
   }
 
   /**
-   * 取得した予定JSONデータから任意のデータを1つランダムに取り出す
+   * ランダムに配列を並び替え、重複しないような配列を返す
    */
-  public feachKamoto() {
-    const length = this.getLength();
-    const rand   = this.getRandomNumber(length);
-    // mockからデータを取得
-    this.yotei = Yotei1Json.yotei[rand];
-    // サーバーからデータを取得
-    // this.yoteiChoiceService.getYoteiChoice().subscribe((yoteiChoice: YoteiChoice) => {
-    //   this.yotei;
-    // });
+  public notDuplicationRandomArray([...yoteiData]: any) {
+    for (let i = yoteiData.length - 1; i >= 0; i--) {
+      const j = Math.floor(Math.random() * (i + 1));
+      [yoteiData[i], yoteiData[j]] = [yoteiData[j], yoteiData[i]];
+    }
+    this.yotei = yoteiData;
+    return yoteiData;
   }
 }

@@ -1,4 +1,4 @@
-import { Component, OnInit, AfterViewInit } from '@angular/core';
+import { Component,  OnInit, AfterViewInit, Input } from '@angular/core';
 // import Swiper core and required components
 import SwiperCore, {
   Navigation,
@@ -33,14 +33,10 @@ SwiperCore.use([Virtual]);
   styleUrls: ['./swiper.component.css']
 })
 export class SwiperComponent {
+  @Input() yotei: any;
 
   constructor() { }
 
   ngOnInit(): void {
   }
-
-  virtualSlides = Array.from({ length: 600 }).map(
-    (el, index) => `Slide ${index + 1}`
-  );
-
 }

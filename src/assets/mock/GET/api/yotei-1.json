@@ -3,23 +3,44 @@
         {
             "id": 1,
             "name": "東京国立博物館",
+            "category": "芸術・教養",
             "message": "仏像や刀がすごい",
-            "prefectures": "東京",
-            "access": "上野駅徒歩10分"
+            "prefecture": "東京"
         },
         {
             "id": 2,
             "name": "東京スカイツリー",
+            "category": "ああああ",
             "message": "634メートルある",
-            "prefectures": "東京都",
-            "access": "押上駅直結"
+            "prefecture": "東京都"
         },
         {
             "id": 3,
             "name": "東京トリックアート迷宮館",
+            "category": "ワイワイ",
             "message": "錯覚を体験できる不思議な世界",
-            "prefectures": "東京",
-            "access": "お台場海浜公園徒歩2分"
+            "prefecture": "東京"
+        },
+        {
+            "id": 4,
+            "name": "築地に行く",
+            "category": "ワイワイ",
+            "message": "錯覚を体験できる不思議な世界",
+            "prefecture": "東京"
+        },
+        {
+            "id": 5,
+            "name": "中華街に行く",
+            "category": "ワイワイ",
+            "message": "錯覚を体験できる不思議な世界",
+            "prefecture": "東京"
+        },
+        {
+            "id": 6,
+            "name": "滝に打たれる",
+            "category": "ワイワイ",
+            "message": "錯覚を体験できる不思議な世界",
+            "prefecture": "東京"
         }
     ]
 }

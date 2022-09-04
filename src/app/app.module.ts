@@ -11,11 +11,15 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 // Angular Material
 import { MatSliderModule } from '@angular/material/slider';
 import { MatButtonModule } from '@angular/material/button';
-// component
-import { RandomComponent } from './random/random.component';
+import { MatChipsModule } from '@angular/material/chips';
 
 // Swiper
 import { SwiperModule } from 'swiper/angular';
+
+// component
+import { RandomComponent } from 'src/app/component/random/random.component';
+import { SwiperComponent } from 'src/app/component/swiper/swiper.component';
+
 
 const ROUTE_TABLE: Routes = [
   { path: 'random', component: RandomComponent }
@@ -25,6 +29,7 @@ const ROUTE_TABLE: Routes = [
   declarations: [
     AppComponent,
     RandomComponent,
+    SwiperComponent,
   ],
   imports: [
     BrowserModule,
@@ -32,6 +37,7 @@ const ROUTE_TABLE: Routes = [
     BrowserAnimationsModule,
     MatSliderModule,
     MatButtonModule,
+    MatChipsModule,
     RouterModule.forRoot(ROUTE_TABLE),
     HttpClientModule,
     SwiperModule,
