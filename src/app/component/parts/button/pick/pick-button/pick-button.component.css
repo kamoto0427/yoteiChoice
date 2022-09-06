@@ -1,0 +1,9 @@
+.pick-button {
+  width: 60%;
+  height: 50px;
+  border-radius: 10px;
+}
+
+.pick-text {
+  margin-top: 5px;
+}

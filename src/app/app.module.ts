@@ -18,8 +18,8 @@ import { SwiperModule } from 'swiper/angular';
 
 // component
 import { RandomComponent } from 'src/app/component/random/random.component';
-import { SwiperComponent } from 'src/app/component/swiper/swiper.component';
-
+import { SwiperComponent } from 'src/app/component/parts/swiper/swiper.component';
+import { PickButtonComponent } from 'src/app/component/parts/button/pick/pick-button/pick-button.component';
 
 const ROUTE_TABLE: Routes = [
   { path: 'random', component: RandomComponent }
@@ -30,6 +30,7 @@ const ROUTE_TABLE: Routes = [
     AppComponent,
     RandomComponent,
     SwiperComponent,
+    PickButtonComponent,
   ],
   imports: [
     BrowserModule,
