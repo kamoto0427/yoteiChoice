@@ -1,4 +1,5 @@
 import { Component, OnInit } from '@angular/core';
+import { StorageService } from 'src/app/service/storage/storage.service';
 
 @Component({
   selector: 'app-pick-button',
@@ -7,9 +8,18 @@ import { Component, OnInit } from '@angular/core';
 })
 export class PickButtonComponent implements OnInit {
 
-  constructor() { }
+  constructor(
+    private storageService: StorageService
+  ) { }
 
   ngOnInit(): void {
+  }
+
+  /**
+   * ローカルストレージにデータを保存する
+   */
+  public onClickStore() {
+    this.storageService.storeLocal();
   }
 
 }

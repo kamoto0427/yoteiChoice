@@ -1,4 +1,9 @@
 <div class="button-container">
-  <button mat-raised-button color="warn" class="pick-button">Pickする</button>
+  <button
+    mat-raised-button color="warn"
+    class="pick-button"
+    (click)="onClickStore()"
+  >
+  Pickする</button>
 </div>
 <div class="pick-text">データを保存できます</div>
